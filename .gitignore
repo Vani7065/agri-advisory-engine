@@ -17,6 +17,9 @@ pip-log.txt
 pip-delete-this-directory.txt
 sql_app.db
 temp_audio/
+# Vector Database & Raw Data
+agri_advisory_backend/chroma_db_storage/
+agri_advisory_backend/data_sources/    
 
 # Node / Frontend ignores
 node_modules/
