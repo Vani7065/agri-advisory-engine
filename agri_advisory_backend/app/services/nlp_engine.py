@@ -17,7 +17,12 @@ class AgriculturalNLPEngine:
             logger.warning("No Groq API key found. Initializing Hugging Face local fallbacks...")
             
         # Local Hugging Face models as local fail-safe structures
-        self.candidate_labels = ["pest_control", "disease_management", "fertilizer_guidance", "weather_advisory", "general_inquiry"]
+        self.candidate_labels = [
+    "CROP_ADVISORY",
+    "MARKET_PRICES",
+    "WEATHER_INFO",
+    "SCHEME_LOOKUP"
+]
         try:
             self.classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
             self.ner_qa = pipeline("question-answering", model="deepset/roberta-base-squad2")
