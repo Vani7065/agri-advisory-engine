@@ -42,12 +42,20 @@ class AgriculturalNLPEngine:
             try:
                 logger.info("Routing query extraction through Groq Cloud Engine...")
                 
-                system_instruction = (
-                    "You are an expert agricultural NLP parsing system. Analyze the farmer's English query and extract: \n"
-                    "1. 'intent': Must be exactly one of: 'pest_control', 'disease_management', 'fertilizer_guidance', 'weather_advisory', or 'general_inquiry'.\n"
-                    "2. 'entities': A clean flat JSON dictionary extracting properties like 'crop', 'pest', 'disease', 'location', or 'issue'. Only include fields found in the text.\n"
-                    "Return ONLY a clean, valid JSON object matching this exact structure, with no conversational prose or markdown codeblock wrappers."
-                )
+            system_instruction = (
+    "You are an agricultural routing engine.\n"
+    "Classify the farmer's query into exactly one of:\n"
+    "- CROP_ADVISORY\n"
+    "- MARKET_PRICES\n"
+    "- WEATHER_INFO\n"
+    "- SCHEME_LOOKUP\n\n"
+    "Return ONLY valid JSON like:\n"
+    "{"
+    "\"intent\":\"WEATHER_INFO\","
+    "\"confidence\":0.98,"
+    "\"entities\":{}"
+    "}"
+)
 
                 response = self.groq_client.chat.completions.create(
                     model="llama-3.3-70b-versatile",
