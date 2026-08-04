@@ -1,0 +1,112 @@
+{
+  "app": {
+    "name": "किसान सहायक",
+    "tagline": "खेती के जवाब, इंटरनेट के बिना भी",
+    "welcome": "स्वागत है",
+    "welcomeBack": "किसान भाई, फिर से स्वागत है",
+    "intro": "अपनी फसल, मिट्टी, मौसम या बाज़ार भाव के बारे में पूछें और व्यावहारिक सलाह पाएँ।"
+  },
+  "nav": {
+    "home": "होम",
+    "dashboard": "डैशबोर्ड",
+    "recommendations": "सिफ़ारिशें",
+    "alerts": "चेतावनी",
+    "profile": "प्रोफ़ाइल",
+    "settings": "सेटिंग्स",
+    "menu": "मेन्यू",
+    "closeMenu": "मेन्यू बंद करें",
+    "openMenu": "मेन्यू खोलें"
+  },
+  "actions": {
+    "askQuestion": "सवाल पूछें",
+    "submit": "जमा करें",
+    "cancel": "रद्द करें",
+    "retry": "फिर कोशिश करें",
+    "search": "खोजें",
+    "save": "सेव करें",
+    "share": "साझा करें",
+    "viewAll": "सभी देखें",
+    "install": "ऐप इंस्टॉल करें",
+    "refresh": "रिफ़्रेश करें",
+    "back": "वापस"
+  },
+  "features": {
+    "weather": "मौसम",
+    "cropInformation": "फसल जानकारी",
+    "marketPrices": "बाज़ार भाव",
+    "governmentSchemes": "सरकारी योजनाएँ",
+    "pestControl": "कीट नियंत्रण",
+    "soilHealth": "मिट्टी स्वास्थ्य",
+    "fertilizer": "खाद",
+    "irrigation": "सिंचाई",
+    "harvest": "कटाई",
+    "seeds": "बीज",
+    "sowing": "बुवाई",
+    "livestock": "पशुधन",
+    "cropDisease": "फसल रोग",
+    "rainfall": "वर्षा",
+    "organicFarming": "जैविक खेती",
+    "loanSupport": "ऋण सहायता",
+    "cropInsurance": "फसल बीमा",
+    "mandiNearby": "नज़दीकी मंडी",
+    "equipmentRental": "यंत्र किराया",
+    "waterConservation": "जल संरक्षण"
+  },
+  "featureHints": {
+    "weather": "आपके गाँव का 7 दिन का पूर्वानुमान",
+    "cropInformation": "किस्में, दूरी और मौसम कैलेंडर",
+    "marketPrices": "आज के नज़दीकी मंडी भाव",
+    "governmentSchemes": "सब्सिडी और आवेदन प्रक्रिया",
+    "pestControl": "कीट पहचान और सुरक्षित उपचार",
+    "soilHealth": "मिट्टी जाँच और सुधार",
+    "fertilizer": "प्रति एकड़ सही मात्रा",
+    "irrigation": "फसल अवस्था अनुसार पानी"
+  },
+  "status": {
+    "offline": "ऑफ़लाइन",
+    "online": "ऑनलाइन",
+    "loading": "लोड हो रहा है",
+    "syncing": "सिंक हो रहा है",
+    "saved": "सेव हो गया",
+    "cached": "ऑफ़लाइन उपलब्ध",
+    "noResults": "कोई परिणाम नहीं मिला",
+    "error": "कुछ गड़बड़ हो गई",
+    "lastUpdated": "अंतिम अपडेट"
+  },
+  "offline": {
+    "banner": "ऑफ़लाइन — नए सवाल पूछने के लिए दोबारा कनेक्ट करें।",
+    "restored": "आप फिर ऑनलाइन हैं।",
+    "hint": "सेव की गई सलाह ऑफ़लाइन भी खुलती रहेगी।"
+  },
+  "language": {
+    "label": "भाषा",
+    "select": "भाषा चुनें",
+    "english": "अंग्रेज़ी",
+    "hindi": "हिन्दी",
+    "kannada": "कन्नड़",
+    "changed": "भाषा बदल गई"
+  },
+  "form": {
+    "yourQuestion": "आपका सवाल",
+    "questionPlaceholder": "उदाहरण: टमाटर के पत्तों पर पीले धब्बे — क्या छिड़काव करें?",
+    "crop": "फसल",
+    "village": "गाँव",
+    "district": "ज़िला",
+    "landSize": "ज़मीन (एकड़)",
+    "phone": "मोबाइल नंबर",
+    "required": "यह जानकारी आवश्यक है",
+    "optional": "वैकल्पिक"
+  },
+  "advisory": {
+    "title": "आज की सलाह",
+    "irrigationTip": "आज सिंचाई न करें, शाम तक बारिश की संभावना है।",
+    "pestTip": "इस सप्ताह पत्तों के नीचे सफ़ेद मक्खी देखें।",
+    "marketTip": "नज़दीकी मंडी में प्याज़ भाव 8% बढ़ा।",
+    "schemeTip": "पीएम-किसान की अगली किश्त की खिड़की खुली है।"
+  },
+  "a11y": {
+    "languageSelector": "ऐप की भाषा बदलें",
+    "connectionStatus": "इंटरनेट कनेक्शन स्थिति",
+    "skipToContent": "मुख्य सामग्री पर जाएँ"
+  }
+}

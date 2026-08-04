@@ -1,0 +1,112 @@
+{
+  "app": {
+    "name": "Kisan Sahayak",
+    "tagline": "Farming answers that work, even without internet",
+    "welcome": "Welcome",
+    "welcomeBack": "Welcome back, farmer",
+    "intro": "Ask about your crop, soil, weather or market price and get practical advice."
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "recommendations": "Recommendations",
+    "alerts": "Alerts",
+    "profile": "Profile",
+    "settings": "Settings",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu"
+  },
+  "actions": {
+    "askQuestion": "Ask Question",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "retry": "Retry",
+    "search": "Search",
+    "save": "Save",
+    "share": "Share",
+    "viewAll": "View all",
+    "install": "Install app",
+    "refresh": "Refresh",
+    "back": "Back"
+  },
+  "features": {
+    "weather": "Weather",
+    "cropInformation": "Crop Information",
+    "marketPrices": "Market Prices",
+    "governmentSchemes": "Government Schemes",
+    "pestControl": "Pest Control",
+    "soilHealth": "Soil Health",
+    "fertilizer": "Fertilizer",
+    "irrigation": "Irrigation",
+    "harvest": "Harvest",
+    "seeds": "Seeds",
+    "sowing": "Sowing",
+    "livestock": "Livestock",
+    "cropDisease": "Crop Disease",
+    "rainfall": "Rainfall",
+    "organicFarming": "Organic Farming",
+    "loanSupport": "Loan & Credit Support",
+    "cropInsurance": "Crop Insurance",
+    "mandiNearby": "Nearby Mandi",
+    "equipmentRental": "Equipment Rental",
+    "waterConservation": "Water Conservation"
+  },
+  "featureHints": {
+    "weather": "7-day forecast for your village",
+    "cropInformation": "Varieties, spacing and season calendar",
+    "marketPrices": "Today's mandi rates near you",
+    "governmentSchemes": "Subsidies and how to apply",
+    "pestControl": "Identify pests and safe treatment",
+    "soilHealth": "Soil test reading and improvement",
+    "fertilizer": "Correct dose per acre",
+    "irrigation": "Water schedule by crop stage"
+  },
+  "status": {
+    "offline": "Offline",
+    "online": "Online",
+    "loading": "Loading",
+    "syncing": "Syncing",
+    "saved": "Saved",
+    "cached": "Available offline",
+    "noResults": "No results found",
+    "error": "Something went wrong",
+    "lastUpdated": "Last updated"
+  },
+  "offline": {
+    "banner": "Offline — reconnect to ask new questions.",
+    "restored": "You are back online.",
+    "hint": "Saved advice and pages still open while offline."
+  },
+  "language": {
+    "label": "Language",
+    "select": "Select language",
+    "english": "English",
+    "hindi": "Hindi",
+    "kannada": "Kannada",
+    "changed": "Language updated"
+  },
+  "form": {
+    "yourQuestion": "Your question",
+    "questionPlaceholder": "Example: Yellow spots on my tomato leaves — what should I spray?",
+    "crop": "Crop",
+    "village": "Village",
+    "district": "District",
+    "landSize": "Land size (acres)",
+    "phone": "Phone number",
+    "required": "This field is required",
+    "optional": "Optional"
+  },
+  "advisory": {
+    "title": "Today's advisory",
+    "irrigationTip": "Skip irrigation today, rain is expected by evening.",
+    "pestTip": "Check the underside of leaves for whitefly this week.",
+    "marketTip": "Onion rates rose 8% at the nearest mandi.",
+    "schemeTip": "PM-Kisan next instalment window is open."
+  },
+  "a11y": {
+    "languageSelector": "Change application language",
+    "connectionStatus": "Internet connection status",
+    "skipToContent": "Skip to content"
+  }
+}

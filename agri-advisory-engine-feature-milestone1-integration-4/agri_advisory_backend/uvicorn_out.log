@@ -1,0 +1,10 @@
+2026-08-04 15:46:01,837 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-08-04 15:46:02,541 - AgriAdvisoryLogger - WARNING - No Groq API key available for audio fallback processing.
+2026-08-04 15:46:02,573 - AgriAdvisoryLogger - WARNING - No Groq API key found. Initializing Hugging Face local fallbacks...
+2026-08-04 15:46:02,586 - AgriAdvisoryLogger - WARNING - transformers not installed. Skipping local Hugging Face pipelines.
+2026-08-04 15:46:02,814 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+INFO:     127.0.0.1:56649 - "GET / HTTP/1.1" 200 OK
+INFO:     10.180.61.250:53092 - "GET / HTTP/1.1" 200 OK
+INFO:     10.180.61.250:53321 - "GET / HTTP/1.1" 200 OK
+INFO:     10.180.61.250:53322 - "GET /loginMsg.js HTTP/1.1" 404 Not Found
+INFO:     10.180.61.250:53323 - "GET /cgi/get.cgi?cmd=home_login HTTP/1.1" 404 Not Found

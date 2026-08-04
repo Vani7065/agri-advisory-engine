@@ -1,0 +1,831 @@
+2026-07-02 22:43:30,774 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-02 22:43:30,784 - AgriAdvisoryLogger - INFO - Creating tables in Supabase...
+2026-07-02 22:43:34,640 - AgriAdvisoryLogger - INFO - Tables created successfully!
+2026-07-02 23:10:39,128 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-02 23:14:53,828 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-02 23:15:04,348 - AgriAdvisoryLogger - INFO - Initializing Hugging Face NLP Engine. This may take a moment to download models...
+2026-07-02 23:15:05,872 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-07-02 23:16:56,865 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-07-02 23:17:30,293 - AgriAdvisoryLogger - INFO - NLP Engine models loaded successfully.
+2026-07-02 23:17:30,443 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-02 23:23:01,221 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_001
+2026-07-02 23:23:05,541 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-02 23:23:05,702 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) could not translate host name "db.arubfclbnyrmwarefbxm.supabase.co" to address: No such host is known. 
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-02 23:28:03,940 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-02 23:28:08,893 - AgriAdvisoryLogger - INFO - Initializing Hugging Face NLP Engine. This may take a moment to download models...
+2026-07-02 23:28:49,012 - huggingface_hub.utils._http - WARNING - '(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/bart-large-mnli/resolve/main/config.json (Caused by ConnectTimeoutError(<HTTPSConnection(host='huggingface.co', port=443) at 0x2ba2a7fcd40>, 'Connection to huggingface.co timed out. (connect timeout=10)'))"), '(Request ID: 836f0ec7-da47-4ef2-a8b6-8806832af1aa)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-mnli/resolve/main/config.json
+2026-07-02 23:28:49,013 - huggingface_hub.utils._http - WARNING - Retrying in 1s [Retry 1/5].
+2026-07-02 23:29:30,125 - huggingface_hub.utils._http - WARNING - '(MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /facebook/bart-large-mnli/resolve/main/config.json (Caused by ConnectTimeoutError(<HTTPSConnection(host='huggingface.co', port=443) at 0x2ba2c82a0f0>, 'Connection to huggingface.co timed out. (connect timeout=10)'))"), '(Request ID: 60407c09-e2f9-4e64-a275-80b4d5763cce)')' thrown while requesting HEAD https://huggingface.co/facebook/bart-large-mnli/resolve/main/config.json
+2026-07-02 23:29:30,126 - huggingface_hub.utils._http - WARNING - Retrying in 2s [Retry 2/5].
+2026-07-02 23:30:05,017 - AgriAdvisoryLogger - INFO - NLP Engine models loaded successfully.
+2026-07-02 23:30:05,092 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-02 23:30:37,124 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_001
+2026-07-02 23:30:38,296 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-02 23:30:38,404 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) could not translate host name "db.arubfclbnyrmwarefbxm.supabase.co" to address: No such host is known. 
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-02 23:38:43,768 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_001
+2026-07-02 23:38:43,773 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-02 23:38:46,330 - AgriAdvisoryLogger - INFO - Session session_vani_001 not found. Creating a new entry in Supabase.
+2026-07-02 23:38:49,083 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-02 23:38:58,426 - AgriAdvisoryLogger - ERROR - Intent Classification error: Numpy is not available
+2026-07-02 23:39:04,061 - AgriAdvisoryLogger - WARNING - Failed to extract Crop Name: Numpy is not available
+2026-07-02 23:39:04,285 - AgriAdvisoryLogger - WARNING - Failed to extract Disease: Numpy is not available
+2026-07-02 23:39:04,514 - AgriAdvisoryLogger - WARNING - Failed to extract Pest: Numpy is not available
+2026-07-02 23:39:04,707 - AgriAdvisoryLogger - WARNING - Failed to extract Fertilizer: Numpy is not available
+2026-07-02 23:39:04,916 - AgriAdvisoryLogger - WARNING - Failed to extract Weather: Numpy is not available
+2026-07-02 23:39:05,139 - AgriAdvisoryLogger - WARNING - Failed to extract Government Scheme: Numpy is not available
+2026-07-02 23:39:05,342 - AgriAdvisoryLogger - WARNING - Failed to extract Location: Numpy is not available
+2026-07-02 23:39:05,509 - AgriAdvisoryLogger - WARNING - Failed to extract Season: Numpy is not available
+2026-07-02 23:39:05,510 - AgriAdvisoryLogger - INFO - Extracted entities: {}
+2026-07-02 23:39:06,462 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_vani_001.
+2026-07-02 23:39:07,189 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 09:10:50,549 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 09:11:10,177 - AgriAdvisoryLogger - INFO - Initializing Hugging Face NLP Engine...
+2026-07-03 09:11:24,718 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 09:12:38,963 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 09:12:46,059 - AgriAdvisoryLogger - INFO - Initializing Hugging Face NLP Engine...
+2026-07-03 09:12:51,369 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 09:14:00,398 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_001
+2026-07-03 09:14:01,769 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-03 09:15:05,076 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 09:17:55,981 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 09:17:59,675 - AgriAdvisoryLogger - INFO - Initializing Hugging Face NLP Engine...
+2026-07-03 09:18:04,927 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 09:18:39,537 - AgriAdvisoryLogger - ERROR - Intent classification failed: Numpy is not available
+2026-07-03 09:18:46,942 - AgriAdvisoryLogger - ERROR - Entity extraction failed for crop: Numpy is not available
+2026-07-03 09:18:47,162 - AgriAdvisoryLogger - ERROR - Entity extraction failed for pest: Numpy is not available
+2026-07-03 09:18:47,380 - AgriAdvisoryLogger - ERROR - Entity extraction failed for disease: Numpy is not available
+2026-07-03 09:19:50,591 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 09:22:24,965 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 09:22:44,886 - AgriAdvisoryLogger - INFO - Initializing Hugging Face NLP Engine...
+2026-07-03 09:22:57,066 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 14:15:14,079 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 14:15:29,601 - AgriAdvisoryLogger - INFO - Initializing Hugging Face NLP Engine...
+2026-07-03 14:15:39,699 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 14:16:42,835 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_001
+2026-07-03 14:16:46,453 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-03 14:17:49,769 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:17:49,772 - AgriAdvisoryLogger - ERROR - Database tracking error (non-fatal): (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:17:51,974 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 14:17:51,979 - AgriAdvisoryLogger - ERROR - Hugging Face processing failed: 'NLPEngine' object has no attribute 'process_query'
+2026-07-03 14:18:55,197 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:18:55,197 - AgriAdvisoryLogger - ERROR - Error updating state metadata fields for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:18:57,047 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 14:20:00,263 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:20:00,264 - AgriAdvisoryLogger - ERROR - Error appending message to history for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:25:15,365 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 14:25:30,569 - AgriAdvisoryLogger - INFO - Initializing Hugging Face NLP Engine...
+2026-07-03 14:25:42,021 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 14:27:09,703 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_001
+2026-07-03 14:27:11,233 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-03 14:28:14,538 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:28:14,543 - AgriAdvisoryLogger - ERROR - Database tracking error (non-fatal): (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:28:16,748 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 14:28:16,752 - AgriAdvisoryLogger - ERROR - Hugging Face processing failed: 'NLPEngine' object has no attribute 'process_query'
+2026-07-03 14:29:20,041 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:29:20,042 - AgriAdvisoryLogger - ERROR - Error updating state metadata fields for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:29:22,452 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 14:30:25,666 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:30:25,667 - AgriAdvisoryLogger - ERROR - Error appending message to history for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:45:54,173 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 14:46:05,842 - AgriAdvisoryLogger - INFO - Initializing Hugging Face Pipelines for Milestone 1...
+2026-07-03 14:46:16,338 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 14:47:23,956 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_001
+2026-07-03 14:47:25,867 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-03 14:48:29,159 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:48:29,170 - AgriAdvisoryLogger - ERROR - Database tracking error (non-fatal): (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:48:31,811 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 14:48:36,074 - AgriAdvisoryLogger - ERROR - Intent extraction step threw an exception: Numpy is not available
+2026-07-03 14:48:44,448 - AgriAdvisoryLogger - ERROR - NER extraction step failed for Crop Name: Numpy is not available
+2026-07-03 14:48:44,795 - AgriAdvisoryLogger - ERROR - NER extraction step failed for Pest: Numpy is not available
+2026-07-03 14:48:45,118 - AgriAdvisoryLogger - ERROR - NER extraction step failed for Disease: Numpy is not available
+2026-07-03 14:48:45,362 - AgriAdvisoryLogger - ERROR - NER extraction step failed for Location: Numpy is not available
+2026-07-03 14:49:48,763 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:49:48,765 - AgriAdvisoryLogger - ERROR - Error updating state metadata fields for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:49:50,822 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 14:50:54,137 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 14:50:54,139 - AgriAdvisoryLogger - ERROR - Error appending message to history for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 15:01:35,468 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 15:01:45,304 - AgriAdvisoryLogger - INFO - Initializing Hugging Face Pipelines for Milestone 1...
+2026-07-03 15:01:56,366 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 15:03:42,774 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 15:03:55,321 - AgriAdvisoryLogger - INFO - Initializing Hugging Face Pipelines for Milestone 1...
+2026-07-03 15:04:03,835 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 15:05:00,341 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_001
+2026-07-03 15:05:02,061 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-03 15:06:05,336 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 15:06:05,337 - AgriAdvisoryLogger - ERROR - Database tracking error (non-fatal): (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 15:06:07,422 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 15:06:18,242 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 15:07:21,534 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 15:07:21,535 - AgriAdvisoryLogger - ERROR - Error appending message to history for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 16:02:50,972 - AgriAdvisoryLogger - INFO - Incoming audio request for session session_vani_001, targeted language code: hi-IN
+2026-07-03 16:02:55,720 - AgriAdvisoryLogger - ERROR - Sarvam STT API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/speech-to-text-translate
+2026-07-03 16:02:55,730 - AgriAdvisoryLogger - WARNING - Primary Sarvam AI STT unavailable or language unsupported. Executing Whisper fallback protocol.
+2026-07-03 16:02:55,738 - AgriAdvisoryLogger - INFO - Attempting fallback STT with Whisper for temp_audio\WhatsApp Audio 2026-07-03 at 3.45.57 PM.mp3
+2026-07-03 16:03:04,177 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+2026-07-03 16:03:04,184 - openai._base_client - INFO - Retrying request to /audio/transcriptions in 0.463797 seconds
+2026-07-03 16:03:06,031 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+2026-07-03 16:03:06,034 - openai._base_client - INFO - Retrying request to /audio/transcriptions in 0.878745 seconds
+2026-07-03 16:03:07,503 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+2026-07-03 16:03:07,517 - AgriAdvisoryLogger - ERROR - Whisper Fallback API error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-07-03 16:03:07,519 - AgriAdvisoryLogger - ERROR - Error during audio speech decoding sequence: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-07-03 16:03:07,520 - AgriAdvisoryLogger - INFO - Attempting fallback STT with Whisper for temp_audio\WhatsApp Audio 2026-07-03 at 3.45.57 PM.mp3
+2026-07-03 16:03:07,961 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+2026-07-03 16:03:07,963 - openai._base_client - INFO - Retrying request to /audio/transcriptions in 0.458576 seconds
+2026-07-03 16:03:09,007 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+2026-07-03 16:03:09,009 - openai._base_client - INFO - Retrying request to /audio/transcriptions in 0.750557 seconds
+2026-07-03 16:03:10,106 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+2026-07-03 16:03:10,110 - AgriAdvisoryLogger - ERROR - Whisper Fallback API error: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-07-03 16:12:39,268 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-03 16:12:51,053 - AgriAdvisoryLogger - INFO - Initializing Hugging Face Pipelines for Milestone 1...
+2026-07-03 16:13:05,969 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-03 16:13:50,773 - AgriAdvisoryLogger - INFO - Incoming audio request for session session_vani_001, targeted language code: hi-IN
+2026-07-03 16:13:56,051 - AgriAdvisoryLogger - ERROR - Sarvam STT API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/speech-to-text-translate
+2026-07-03 16:13:56,059 - AgriAdvisoryLogger - WARNING - Primary Sarvam AI STT unavailable or language unsupported. Executing Whisper fallback protocol.
+2026-07-03 16:13:56,061 - AgriAdvisoryLogger - INFO - Attempting fallback STT with Whisper for temp_audio\WhatsApp Audio 2026-07-03 at 3.45.57 PM.mp3
+2026-07-03 16:14:02,645 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+2026-07-03 16:14:02,648 - openai._base_client - INFO - Retrying request to /audio/transcriptions in 0.478722 seconds
+2026-07-03 16:14:03,882 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+2026-07-03 16:14:03,884 - openai._base_client - INFO - Retrying request to /audio/transcriptions in 0.957015 seconds
+2026-07-03 16:14:05,305 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+2026-07-03 16:14:05,315 - AgriAdvisoryLogger - WARNING - OpenAI Account Quota Exceeded. Activating sandbox mock transcription for Milestone verification.
+2026-07-03 16:14:05,319 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_001
+2026-07-03 16:14:08,540 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-03 16:15:11,874 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 16:15:11,876 - AgriAdvisoryLogger - ERROR - Database tracking error (non-fatal): (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 16:15:13,786 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 16:15:25,736 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-03 16:16:29,136 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-03 16:16:29,136 - AgriAdvisoryLogger - ERROR - Error appending message to history for session session_vani_001: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-07 11:59:39,749 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-07 11:59:57,100 - AgriAdvisoryLogger - INFO - Initializing Hugging Face Pipelines for Milestone 1...
+2026-07-07 12:00:10,670 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-07 12:03:54,186 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_ml_001
+2026-07-07 12:03:58,118 - AgriAdvisoryLogger - INFO - Detected language code: ml
+2026-07-07 12:04:00,873 - AgriAdvisoryLogger - INFO - Session session_vani_ml_001 not found. Creating a new entry in Supabase.
+2026-07-07 12:04:03,839 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:04:15,322 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_vani_ml_001.
+2026-07-07 12:04:16,914 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:04:48,773 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_kn_001
+2026-07-07 12:04:48,779 - AgriAdvisoryLogger - INFO - Detected language code: kn
+2026-07-07 12:04:49,154 - AgriAdvisoryLogger - INFO - Session session_vani_kn_001 not found. Creating a new entry in Supabase.
+2026-07-07 12:04:51,928 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:04:55,235 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_vani_kn_001.
+2026-07-07 12:04:56,160 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:06:17,245 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_rice_test
+2026-07-07 12:06:17,258 - AgriAdvisoryLogger - INFO - Detected language code: ta
+2026-07-07 12:06:17,608 - AgriAdvisoryLogger - INFO - Session session_vani_rice_test not found. Creating a new entry in Supabase.
+2026-07-07 12:06:20,345 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:06:25,989 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_vani_rice_test.
+2026-07-07 12:06:28,795 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:15:18,440 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-07 12:15:23,598 - AgriAdvisoryLogger - INFO - Initializing Hugging Face Pipelines for Milestone 1...
+2026-07-07 12:15:28,943 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-07 12:16:32,279 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_ml_generic
+2026-07-07 12:16:33,053 - AgriAdvisoryLogger - INFO - Detected language code: ml
+2026-07-07 12:16:36,264 - AgriAdvisoryLogger - INFO - Session session_vani_ml_generic not found. Creating a new entry in Supabase.
+2026-07-07 12:16:39,057 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:16:44,615 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_vani_ml_generic.
+2026-07-07 12:16:45,456 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:19:19,118 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_hi_generic
+2026-07-07 12:19:19,132 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-07 12:19:19,611 - AgriAdvisoryLogger - INFO - Session session_vani_hi_generic not found. Creating a new entry in Supabase.
+2026-07-07 12:19:22,461 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:19:25,591 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_vani_hi_generic.
+2026-07-07 12:19:26,539 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:23:09,357 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-07 12:23:15,369 - AgriAdvisoryLogger - INFO - Initializing Hugging Face Pipelines for Milestone 1...
+2026-07-07 12:23:20,683 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-07 12:23:46,862 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_vani_ml_generic
+2026-07-07 12:23:47,802 - AgriAdvisoryLogger - INFO - Detected language code: ml
+2026-07-07 12:23:52,474 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:23:52,479 - AgriAdvisoryLogger - ERROR - Translation failure, executing contextual test fallback: Empty translation string returned
+2026-07-07 12:23:58,795 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_vani_ml_generic.
+2026-07-07 12:23:59,998 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-07 12:24:00,002 - AgriAdvisoryLogger - ERROR - Back-translation failure, executing contextual mock mapping: Empty output translation
+2026-07-09 22:01:44,302 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:02:01,609 - AgriAdvisoryLogger - WARNING - No Groq API key found. Initializing Hugging Face local fallbacks...
+2026-07-09 22:02:10,676 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 22:02:10,710 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 22:04:34,122 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_groq_ml_field
+2026-07-09 22:04:36,770 - AgriAdvisoryLogger - INFO - Detected language code: ml
+2026-07-09 22:05:40,038 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_groq_ml_field: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-09 22:05:40,040 - AgriAdvisoryLogger - ERROR - Database tracking error (non-fatal): (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-09 22:05:41,762 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-09 22:05:41,764 - AgriAdvisoryLogger - ERROR - Translation failure, executing contextual test fallback: Empty translation string returned
+2026-07-09 22:05:41,765 - AgriAdvisoryLogger - INFO - Executing local fallback processing pipeline...
+2026-07-09 22:06:56,557 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_groq_ml_field: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-09 22:06:56,557 - AgriAdvisoryLogger - ERROR - Error updating state metadata fields for session session_groq_ml_field: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-09 22:06:57,433 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-09 22:06:57,436 - AgriAdvisoryLogger - ERROR - Back-translation failure, executing contextual mock mapping: Empty output translation
+2026-07-09 22:08:00,684 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_groq_ml_field: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-09 22:08:00,685 - AgriAdvisoryLogger - ERROR - Error appending message to history for session session_groq_ml_field: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-09 22:11:18,810 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:11:26,742 - AgriAdvisoryLogger - WARNING - No Groq API key found. Initializing Hugging Face local fallbacks...
+2026-07-09 22:11:34,708 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 22:11:34,723 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 22:14:49,539 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:14:55,268 - AgriAdvisoryLogger - WARNING - No Groq API key found. Initializing Hugging Face local fallbacks...
+2026-07-09 22:15:03,897 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 22:15:03,911 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 22:15:19,015 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:15:25,110 - AgriAdvisoryLogger - WARNING - No Groq API key found. Initializing Hugging Face local fallbacks...
+2026-07-09 22:15:30,787 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 22:15:30,801 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 22:19:13,802 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:19:22,019 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:19:27,645 - AgriAdvisoryLogger - INFO - Groq API key detected. Initializing Groq cloud client for high-speed NLP.
+2026-07-09 22:19:33,160 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 22:19:33,175 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 22:20:17,323 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_groq_ml_field
+2026-07-09 22:20:18,207 - AgriAdvisoryLogger - INFO - Detected language code: ml
+2026-07-09 22:20:21,872 - AgriAdvisoryLogger - INFO - Session session_groq_ml_field not found. Creating a new entry in Supabase.
+2026-07-09 22:20:25,180 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-09 22:20:25,185 - AgriAdvisoryLogger - ERROR - Translation failure, executing contextual test fallback: Empty translation string returned
+2026-07-09 22:20:25,185 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 22:20:26,206 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 22:20:26,920 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'issue': 'stagnant water', 'crop': 'crops'}}
+2026-07-09 22:20:27,871 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_groq_ml_field.
+2026-07-09 22:20:29,137 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 400 Client Error: Bad Request for url: https://api.sarvam.ai/translate
+2026-07-09 22:20:29,142 - AgriAdvisoryLogger - ERROR - Back-translation failure, executing contextual mock mapping: Empty output translation
+2026-07-09 22:28:41,454 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:28:50,283 - AgriAdvisoryLogger - INFO - Groq API key detected. Initializing Groq cloud client for high-speed NLP.
+2026-07-09 22:28:57,184 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 22:28:57,218 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 22:29:29,463 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_groq_ml_field
+2026-07-09 22:29:30,983 - AgriAdvisoryLogger - INFO - Detected language code: ml
+2026-07-09 22:29:36,196 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 403 Client Error: Forbidden for url: https://api.sarvam.ai/translate
+2026-07-09 22:29:36,201 - AgriAdvisoryLogger - ERROR - Translation failure, executing contextual test fallback: Empty translation string returned
+2026-07-09 22:29:36,202 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 22:29:37,408 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 22:29:37,496 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'issue': 'stagnant water', 'crop': 'crops'}}
+2026-07-09 22:29:38,373 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_groq_ml_field.
+2026-07-09 22:29:39,180 - AgriAdvisoryLogger - ERROR - Sarvam Translation API error: 403 Client Error: Forbidden for url: https://api.sarvam.ai/translate
+2026-07-09 22:29:39,184 - AgriAdvisoryLogger - ERROR - Back-translation failure, executing contextual mock mapping: Empty output translation
+2026-07-09 22:32:31,814 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:32:38,029 - AgriAdvisoryLogger - INFO - Groq API key detected. Initializing Groq cloud client for high-speed NLP.
+2026-07-09 22:32:43,739 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 22:32:43,753 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 22:33:09,695 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_groq_ml_field
+2026-07-09 22:33:10,578 - AgriAdvisoryLogger - INFO - Detected language code: ml
+2026-07-09 22:33:15,630 - AgriAdvisoryLogger - INFO - Successfully translated 'ml-IN' to 'en-IN' via Sarvam.
+2026-07-09 22:33:15,635 - AgriAdvisoryLogger - INFO - Canonical English query translation result: The fields are waterlogged, which affects the crops.
+2026-07-09 22:33:15,635 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 22:33:16,441 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 22:33:16,607 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'issue': 'waterlogged fields', 'crop': 'crops'}}
+2026-07-09 22:33:17,375 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_groq_ml_field.
+2026-07-09 22:33:19,739 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'ml-IN' via Sarvam.
+2026-07-09 22:35:21,428 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_groq_hi_field
+2026-07-09 22:35:21,434 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-09 22:35:21,821 - AgriAdvisoryLogger - INFO - Session session_groq_hi_field not found. Creating a new entry in Supabase.
+2026-07-09 22:35:25,458 - AgriAdvisoryLogger - INFO - Successfully translated 'hi-IN' to 'en-IN' via Sarvam.
+2026-07-09 22:35:25,462 - AgriAdvisoryLogger - INFO - Canonical English query translation result: My crop is withering, so give me some good advice.
+2026-07-09 22:35:25,462 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 22:35:26,206 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 22:35:26,210 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'issue': 'withering', 'crop': 'unknown'}}
+2026-07-09 22:35:27,037 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_groq_hi_field.
+2026-07-09 22:35:28,561 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'hi-IN' via Sarvam.
+2026-07-09 22:36:03,971 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_groq_ta_field
+2026-07-09 22:36:03,974 - AgriAdvisoryLogger - INFO - Detected language code: ta
+2026-07-09 22:36:04,346 - AgriAdvisoryLogger - INFO - Session session_groq_ta_field not found. Creating a new entry in Supabase.
+2026-07-09 22:36:07,984 - AgriAdvisoryLogger - INFO - Successfully translated 'ta-IN' to 'en-IN' via Sarvam.
+2026-07-09 22:36:07,987 - AgriAdvisoryLogger - INFO - Canonical English query translation result: There is excess water stagnating in the paddy field, what should be done?
+2026-07-09 22:36:07,988 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 22:36:08,702 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 22:36:08,705 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'issue': 'excess water stagnation', 'crop': 'paddy'}}
+2026-07-09 22:36:09,668 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_groq_ta_field.
+2026-07-09 22:36:11,261 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'ta-IN' via Sarvam.
+2026-07-09 22:36:40,983 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_groq_kn_field
+2026-07-09 22:36:40,985 - AgriAdvisoryLogger - INFO - Detected language code: kn
+2026-07-09 22:36:41,401 - AgriAdvisoryLogger - INFO - Session session_groq_kn_field not found. Creating a new entry in Supabase.
+2026-07-09 22:36:45,054 - AgriAdvisoryLogger - INFO - Successfully translated 'kn-IN' to 'en-IN' via Sarvam.
+2026-07-09 22:36:45,058 - AgriAdvisoryLogger - INFO - Canonical English query translation result: The leaves are decaying, what is the solution?
+2026-07-09 22:36:45,060 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 22:36:45,667 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 22:36:45,670 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'disease_management', 'entities': {'issue': 'decaying leaves'}}
+2026-07-09 22:36:47,100 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_groq_kn_field.
+2026-07-09 22:36:48,841 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'kn-IN' via Sarvam.
+2026-07-09 22:42:36,672 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:42:46,836 - AgriAdvisoryLogger - INFO - Groq API key detected. Initializing Groq cloud client for high-speed NLP.
+2026-07-09 22:42:53,817 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 22:42:53,830 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 22:49:59,709 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 22:50:00,171 - AgriAdvisoryLogger - INFO - Groq API key found. Hooking up Whisper-Cloud fallback driver for audio processing.
+2026-07-09 22:50:05,518 - AgriAdvisoryLogger - INFO - Groq API key detected. Initializing Groq cloud client for high-speed NLP.
+2026-07-09 22:50:13,484 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 22:50:13,499 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 22:52:49,144 - AgriAdvisoryLogger - INFO - Incoming audio request for session session_audio_hi_field, targeted language code: hi-IN
+2026-07-09 22:52:49,149 - AgriAdvisoryLogger - INFO - Attempting primary audio transcription via Sarvam AI (hi-IN)...
+2026-07-09 22:52:52,440 - AgriAdvisoryLogger - ERROR - Sarvam STT returned status code 400: {"detail":"Model 'saaras:v1' has been deprecated. Please use 'saaras:v2.5' instead."}
+2026-07-09 22:52:52,441 - AgriAdvisoryLogger - WARNING - Primary STT unavailable or failed. Routing audio stream to Groq Whisper Cloud...
+2026-07-09 22:52:55,208 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-07-09 22:52:55,217 - AgriAdvisoryLogger - INFO - Successfully rescued audio pipeline processing using Groq Whisper.
+2026-07-09 22:52:55,220 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_audio_hi_field
+2026-07-09 22:52:56,156 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-09 22:53:00,875 - AgriAdvisoryLogger - INFO - Session session_audio_hi_field not found. Creating a new entry in Supabase.
+2026-07-09 22:53:04,622 - AgriAdvisoryLogger - INFO - Successfully translated 'hi-IN' to 'en-IN' via Sarvam.
+2026-07-09 22:53:04,625 - AgriAdvisoryLogger - INFO - Canonical English query translation result: Tomato plants have insects on them, what should I spray?
+2026-07-09 22:53:04,625 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 22:53:05,342 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 22:53:05,426 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'pest_control', 'entities': {'crop': 'tomato', 'pest': 'insects'}}
+2026-07-09 22:53:06,241 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_audio_hi_field.
+2026-07-09 22:53:09,003 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'hi-IN' via Sarvam.
+2026-07-09 22:58:16,083 - AgriAdvisoryLogger - INFO - Incoming audio request for session session_audio_ml_field, targeted language code: ml-IN
+2026-07-09 22:58:16,106 - AgriAdvisoryLogger - INFO - Attempting primary audio transcription via Sarvam AI (ml-IN)...
+2026-07-09 22:58:17,700 - AgriAdvisoryLogger - ERROR - Sarvam STT returned status code 400: {"detail":"Model 'saaras:v1' has been deprecated. Please use 'saaras:v2.5' instead."}
+2026-07-09 22:58:17,700 - AgriAdvisoryLogger - WARNING - Primary STT unavailable or failed. Routing audio stream to Groq Whisper Cloud...
+2026-07-09 22:58:19,032 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-07-09 22:58:19,055 - AgriAdvisoryLogger - INFO - Successfully rescued audio pipeline processing using Groq Whisper.
+2026-07-09 22:58:19,064 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_audio_ml_field
+2026-07-09 22:58:19,104 - AgriAdvisoryLogger - INFO - Detected language code: pa
+2026-07-09 22:58:19,559 - AgriAdvisoryLogger - INFO - Session session_audio_ml_field not found. Creating a new entry in Supabase.
+2026-07-09 22:58:22,264 - AgriAdvisoryLogger - INFO - Successfully translated 'ml-IN' to 'en-IN' via Sarvam.
+2026-07-09 22:58:22,267 - AgriAdvisoryLogger - INFO - Canonical English query translation result: ਮੈਲੀਲੀਲ੍ ਵੇਲਲਂ ਕ੆ਟਿ ਕੀਡਕੁਨ੍ਨੂ ਵੀਲਗਲ ਨਸ਼ੀਕਾਂ ਸਾਧੀਦੇ ਉਣਡੇ।
+2026-07-09 22:58:22,273 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 22:58:23,096 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 22:58:23,118 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'pest_control', 'entities': {'crop': 'ਮੈਲੀ', 'pest': 'ਕੀਡ'}}
+2026-07-09 22:58:23,878 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_audio_ml_field.
+2026-07-09 22:58:25,517 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'ml-IN' via Sarvam.
+2026-07-09 22:59:22,167 - AgriAdvisoryLogger - INFO - Incoming audio request for session session_audio_ml_field, targeted language code: ml-IN
+2026-07-09 22:59:22,176 - AgriAdvisoryLogger - INFO - Attempting primary audio transcription via Sarvam AI (ml-IN)...
+2026-07-09 22:59:24,090 - AgriAdvisoryLogger - ERROR - Sarvam STT returned status code 400: {"detail":"Model 'saaras:v1' has been deprecated. Please use 'saaras:v2.5' instead."}
+2026-07-09 22:59:24,091 - AgriAdvisoryLogger - WARNING - Primary STT unavailable or failed. Routing audio stream to Groq Whisper Cloud...
+2026-07-09 22:59:25,533 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 200 OK"
+2026-07-09 22:59:25,541 - AgriAdvisoryLogger - INFO - Successfully rescued audio pipeline processing using Groq Whisper.
+2026-07-09 22:59:25,543 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_audio_ml_field
+2026-07-09 22:59:25,547 - AgriAdvisoryLogger - INFO - Detected language code: pa
+2026-07-09 22:59:27,973 - AgriAdvisoryLogger - INFO - Successfully translated 'ml-IN' to 'en-IN' via Sarvam.
+2026-07-09 22:59:27,977 - AgriAdvisoryLogger - INFO - Canonical English query translation result: ਮੈਲੀਲੀਲ੍ ਵੇਲਲਂ ਕ੆ਟਿ ਕੀਡਕੁਨ੍ਨੂ ਵੀਲਗਲ ਨਸ਼ੀਕਾਂ ਸਾਧੀਦੇ ਉਣਡੇ।
+2026-07-09 22:59:27,978 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 22:59:28,681 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 22:59:28,685 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'pest_control', 'entities': {'crop': 'ਮੈਲੀ', 'pest': 'ਕੀਡਕੁਨ੍ਨੂ'}}
+2026-07-09 22:59:29,489 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_audio_ml_field.
+2026-07-09 22:59:31,212 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'ml-IN' via Sarvam.
+2026-07-09 23:03:33,942 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 23:03:34,473 - AgriAdvisoryLogger - INFO - Groq API key found. Hooking up Whisper-Cloud fallback driver for audio processing.
+2026-07-09 23:03:44,297 - AgriAdvisoryLogger - INFO - Groq API key detected. Initializing Groq cloud client for high-speed NLP.
+2026-07-09 23:03:52,420 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 23:03:52,488 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 23:06:02,013 - AgriAdvisoryLogger - INFO - Incoming audio request for session session_audio_ml_field, targeted language code: ml-IN
+2026-07-09 23:06:02,018 - AgriAdvisoryLogger - INFO - Attempting primary audio transcription via Sarvam AI (ml-IN)...
+2026-07-09 23:06:03,822 - AgriAdvisoryLogger - ERROR - Sarvam STT returned status code 400: {"detail":"Model 'saaras:v1' has been deprecated. Please use 'saaras:v2.5' instead."}
+2026-07-09 23:06:03,822 - AgriAdvisoryLogger - WARNING - Primary STT unavailable or failed. Routing audio stream to Groq Whisper Cloud...
+2026-07-09 23:06:05,143 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/audio/transcriptions "HTTP/1.1 400 Bad Request"
+2026-07-09 23:06:05,147 - AgriAdvisoryLogger - ERROR - Groq Whisper fallback pipeline crashed: Error code: 400 - {'error': {'message': 'unsupported language: malayalam\nLanguage must be one of: [tr hi eu bs sw fo sa ar he el sq km ps nn lb en zh sv fi mi is tt ln es ms hr et mk hy gu tl fr no mg ko pt so ht su it uk da bg br af pl vi cs ro ur cy bn az kn sn be tk mt ha jv yue ca nl te fa lv gl tg uz de ta lt ml sl bo haw ja sk ne mr ka sd my hu la sr kk lo ru id mn pa yo oc yi as th si am ba]', 'type': 'invalid_request_error'}}
+2026-07-09 23:06:05,148 - AgriAdvisoryLogger - ERROR - Audio processing execution layer threw an exception: Both primary Sarvam and fallback Groq audio translation engines failed.
+2026-07-09 23:09:37,580 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-09 23:09:37,869 - AgriAdvisoryLogger - INFO - Groq API key found. Hooking up Whisper-Cloud fallback driver for audio processing.
+2026-07-09 23:09:42,066 - AgriAdvisoryLogger - INFO - Groq API key detected. Initializing Groq cloud client for high-speed NLP.
+2026-07-09 23:09:47,474 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-09 23:09:47,486 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-09 23:09:54,335 - AgriAdvisoryLogger - INFO - Incoming audio request for session session_audio_ml_field, targeted language code: ml-IN
+2026-07-09 23:09:54,340 - AgriAdvisoryLogger - INFO - Attempting primary audio transcription via Sarvam AI (ml-IN)...
+2026-07-09 23:09:56,215 - AgriAdvisoryLogger - INFO - Sarvam AI audio transcription successful.
+2026-07-09 23:09:56,220 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_audio_ml_field
+2026-07-09 23:09:58,543 - AgriAdvisoryLogger - INFO - Detected language code: en
+2026-07-09 23:10:04,325 - AgriAdvisoryLogger - INFO - Successfully translated 'ml-IN' to 'en-IN' via Sarvam.
+2026-07-09 23:10:04,328 - AgriAdvisoryLogger - INFO - Canonical English query translation result: Water is accumulated in the paddy field. There is a possibility of the crops getting destroyed.
+2026-07-09 23:10:04,328 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-09 23:10:05,873 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-09 23:10:05,939 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'crop': 'paddy', 'issue': 'water accumulation'}}
+2026-07-09 23:10:06,915 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_audio_ml_field.
+2026-07-09 23:10:08,203 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'ml-IN' via Sarvam.
+2026-07-10 16:51:22,400 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_groq_ml_field
+2026-07-10 16:51:22,576 - AgriAdvisoryLogger - INFO - Detected language code: ml
+2026-07-10 16:51:27,351 - AgriAdvisoryLogger - INFO - Successfully translated 'ml-IN' to 'en-IN' via Sarvam.
+2026-07-10 16:51:27,358 - AgriAdvisoryLogger - INFO - Canonical English query translation result: The fields are waterlogged, which affects the crops.
+2026-07-10 16:51:27,367 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-10 16:51:27,850 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-10 16:51:27,879 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'issue': 'waterlogged fields', 'crop': 'crops'}}
+2026-07-10 16:51:28,323 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_groq_ml_field.
+2026-07-10 16:51:29,971 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'ml-IN' via Sarvam.
+2026-07-10 21:32:58,787 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-10 21:32:59,200 - AgriAdvisoryLogger - INFO - Groq API key found. Hooking up Whisper-Cloud fallback driver for audio processing.
+2026-07-10 21:33:04,761 - AgriAdvisoryLogger - INFO - Groq API key detected. Initializing Groq cloud client for high-speed NLP.
+2026-07-10 21:33:13,187 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-10 21:33:13,215 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-10 21:35:41,132 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_groq_ml_field
+2026-07-10 21:35:44,270 - AgriAdvisoryLogger - INFO - Detected language code: ml
+2026-07-10 21:35:49,520 - AgriAdvisoryLogger - INFO - Successfully translated 'ml-IN' to 'en-IN' via Sarvam.
+2026-07-10 21:35:49,522 - AgriAdvisoryLogger - INFO - Canonical English query translation result: The fields are waterlogged, which affects the crops.
+2026-07-10 21:35:49,522 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-10 21:35:50,393 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-10 21:35:50,469 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'issue': 'waterlogged fields', 'crop': 'crops'}}
+2026-07-10 21:35:51,363 - AgriAdvisoryLogger - INFO - Successfully updated metadata parameters for session session_groq_ml_field.
+2026-07-10 21:35:52,669 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'ml-IN' via Sarvam.
+2026-07-15 20:43:55,673 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-07-15 20:43:56,153 - AgriAdvisoryLogger - INFO - Groq API key found. Hooking up Whisper-Cloud fallback driver for audio processing.
+2026-07-15 20:44:02,298 - AgriAdvisoryLogger - INFO - Groq API key detected. Initializing Groq cloud client for high-speed NLP.
+2026-07-15 20:44:10,133 - AgriAdvisoryLogger - INFO - Local Hugging Face fail-safe pipelines initialized successfully.
+2026-07-15 20:44:10,149 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
+2026-07-15 22:05:56,256 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_web_client
+2026-07-15 22:06:00,014 - AgriAdvisoryLogger - INFO - Detected language code: hi
+2026-07-15 22:07:03,247 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:07:03,249 - AgriAdvisoryLogger - ERROR - Database tracking error (non-fatal): (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:07:03,249 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-15 22:07:04,450 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-15 22:07:04,574 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'issue': 'फसल खराब होना', 'crop': 'अनिर्दिष्ट'}}
+2026-07-15 22:08:07,782 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:08:07,784 - AgriAdvisoryLogger - ERROR - Error updating state metadata fields for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:09:11,041 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:09:11,043 - AgriAdvisoryLogger - ERROR - Error appending message to history for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:15:45,439 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_web_client
+2026-07-15 22:15:45,484 - AgriAdvisoryLogger - INFO - Detected language code: ta
+2026-07-15 22:16:48,728 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:16:48,730 - AgriAdvisoryLogger - ERROR - Database tracking error (non-fatal): (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:16:48,732 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-15 22:16:49,308 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-15 22:16:49,348 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'general_inquiry', 'entities': {'issue': 'excess water', 'crop': 'paddy'}}
+2026-07-15 22:17:52,573 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:17:52,577 - AgriAdvisoryLogger - ERROR - Error updating state metadata fields for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:18:55,828 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:18:55,828 - AgriAdvisoryLogger - ERROR - Error appending message to history for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:19:33,742 - AgriAdvisoryLogger - INFO - Incoming text request for session: session_web_client
+2026-07-15 22:19:33,758 - AgriAdvisoryLogger - INFO - Detected language code: kn
+2026-07-15 22:20:36,958 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:20:36,960 - AgriAdvisoryLogger - ERROR - Database tracking error (non-fatal): (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:20:38,777 - AgriAdvisoryLogger - INFO - Successfully translated 'kn-IN' to 'en-IN' via Sarvam.
+2026-07-15 22:20:38,782 - AgriAdvisoryLogger - INFO - Canonical English query translation result: The leaves are decaying, what is the solution?
+2026-07-15 22:20:38,783 - AgriAdvisoryLogger - INFO - Routing query extraction through Groq Cloud Engine...
+2026-07-15 22:20:39,041 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-15 22:20:39,058 - AgriAdvisoryLogger - INFO - Groq Extraction Result: {'intent': 'disease_management', 'entities': {'issue': 'decaying leaves'}}
+2026-07-15 22:21:42,270 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:21:42,274 - AgriAdvisoryLogger - ERROR - Error updating state metadata fields for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:21:44,207 - AgriAdvisoryLogger - INFO - Successfully translated 'en-IN' to 'kn-IN' via Sarvam.
+2026-07-15 22:22:47,422 - AgriAdvisoryLogger - ERROR - Error in get_or_create_session for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-07-15 22:22:47,423 - AgriAdvisoryLogger - ERROR - Error appending message to history for session session_web_client: (psycopg2.OperationalError) connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (13.213.241.248), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (3.1.167.181), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "aws-1-ap-southeast-1.pooler.supabase.com" (54.179.210.0), port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-08-04 15:05:39,897 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-08-04 15:05:41,008 - AgriAdvisoryLogger - WARNING - No Groq API key available for audio fallback processing.
+2026-08-04 15:46:01,837 - AgriAdvisoryLogger - INFO - Database engine initialized successfully.
+2026-08-04 15:46:02,541 - AgriAdvisoryLogger - WARNING - No Groq API key available for audio fallback processing.
+2026-08-04 15:46:02,573 - AgriAdvisoryLogger - WARNING - No Groq API key found. Initializing Hugging Face local fallbacks...
+2026-08-04 15:46:02,586 - AgriAdvisoryLogger - WARNING - transformers not installed. Skipping local Hugging Face pipelines.
+2026-08-04 15:46:02,814 - AgriAdvisoryLogger - INFO - FastAPI initialization sequence completed successfully.
