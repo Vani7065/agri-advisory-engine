@@ -1,108 +1,70 @@
-import os
-import json
-from transformers import pipeline
-from groq import Groq
-from app.core.logger import logger
-from app.core.config import settings
+import re
+from app.services.intent_classifier import classify_intent
+
 
 class AgriculturalNLPEngine:
+
     def __init__(self):
-        # Initialize Groq if available
-        self.groq_api_key = settings.GROQ_API_KEY
-        if self.groq_api_key:
-            logger.info("Groq API key detected. Initializing Groq cloud client for high-speed NLP.")
-            self.groq_client = Groq(api_key=self.groq_api_key)
-        else:
-            self.groq_client = None
-            logger.warning("No Groq API key found. Initializing Hugging Face local fallbacks...")
-            
-        # Local Hugging Face models as local fail-safe structures
-        self.candidate_labels = [
-    "CROP_ADVISORY",
-    "MARKET_PRICES",
-    "WEATHER_INFO",
-    "SCHEME_LOOKUP"
-]
-        try:
-            self.classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
-            self.ner_qa = pipeline("question-answering", model="deepset/roberta-base-squad2")
-            logger.info("Local Hugging Face fail-safe pipelines initialized successfully.")
-        except Exception as e:
-            logger.error(f"Failed to load local Hugging Face pipelines: {e}")
-            self.classifier = None
-            self.ner_qa = None
+        self.crop_list = [
+            "rice",
+            "wheat",
+            "tomato",
+            "cotton",
+            "maize",
+            "onion",
+            "potato",
+            "banana",
+            "groundnut",
+            "sugarcane"
+        ]
 
-    def process_query(self, canonical_query: str) -> dict:
-        """
-        Dynamically extracts structural intent and entities from an English query.
-        Uses Groq LLM if available, otherwise safely drops back to Hugging Face pipelines.
-        """
-        # --- PATH A: LIVE GROQ DATA EXTRACTION ---
-        if self.groq_client:
-            try:
-                logger.info("Routing query extraction through Groq Cloud Engine...")
-                
-            system_instruction = (
-    "You are an agricultural routing engine.\n"
-    "Classify the farmer's query into exactly one of:\n"
-    "- CROP_ADVISORY\n"
-    "- MARKET_PRICES\n"
-    "- WEATHER_INFO\n"
-    "- SCHEME_LOOKUP\n\n"
-    "Return ONLY valid JSON like:\n"
-    "{"
-    "\"intent\":\"WEATHER_INFO\","
-    "\"confidence\":0.98,"
-    "\"entities\":{}"
-    "}"
-)
-
-                response = self.groq_client.chat.completions.create(
-                    model="llama-3.3-70b-versatile",
-                    messages=[
-                        {"role": "system", "content": system_instruction},
-                        {"role": "user", "content": f"Query: {canonical_query}"}
-                    ],
-                    temperature=0.1,
-                    max_tokens=250
-                )
-                
-                raw_content = response.choices[0].message.content.strip()
-                
-                # Sanitize the output string if markdown syntax accidentally bled out
-                if raw_content.startswith("```"):
-                    raw_content = raw_content.replace("```json", "").replace("```", "").strip()
-                    
-                parsed_json = json.loads(raw_content)
-                logger.info(f"Groq Extraction Result: {parsed_json}")
-                return parsed_json
-                
-            except Exception as groq_err:
-                logger.error(f"Groq processing encountered a runtime hurdle: {groq_err}. Dropping to local pipelines.")
-
-        # --- PATH B: OFFLINE HUGGING FACE SAFE FALLBACK ---
-        logger.info("Executing local fallback processing pipeline...")
-        intent = "general_inquiry"
+    def extract_entities(self, query):
         entities = {}
-        
-        if self.classifier and self.ner_qa:
-            try:
-                classification = self.classifier(canonical_query, candidate_labels=self.candidate_labels)
-                intent = classification["labels"][0]
-                
-                qa_crop = self.ner_qa(question="What crop or plant?", context=canonical_query)
-                if qa_crop["score"] > 0.1:
-                    entities["crop"] = qa_crop["answer"].strip()
-                    
-                qa_issue = self.ner_qa(question="What is the problem, pest, or infection?", context=canonical_query)
-                if qa_issue["score"] > 0.1:
-                    entities["issue"] = qa_issue["answer"].strip()
-            except Exception as hf_err:
-                logger.error(f"HF fallback model calculation exception: {hf_err}")
-                
-        return {"intent": intent, "entities": entities}
+        query_lower = query.lower()
 
-# Global structural initialization singleton
+        # Crop extraction
+        for crop in self.crop_list:
+            if re.search(rf"\b{re.escape(crop)}\b", query_lower):
+                entities["crop"] = crop
+                break
+
+        # Location extraction
+        match = re.search(r"\bin\s+([A-Za-z ]+)", query)
+
+        if match:
+            location = match.group(1).strip()
+
+            for word in ["today", "tomorrow", "yesterday"]:
+                location = location.replace(word, "").strip()
+
+            entities["location"] = location
+
+        # Scheme extraction
+        if "pm kisan" in query_lower:
+            entities["scheme"] = "PM Kisan"
+
+        # Issue extraction
+        if "spot" in query_lower:
+            entities["issue"] = "spots"
+        elif "yellow" in query_lower:
+            entities["issue"] = "yellow leaves"
+        elif "worm" in query_lower:
+            entities["issue"] = "worm"
+
+        # Commodity extraction
+        if "price" in query_lower and "crop" in entities:
+            entities["commodity"] = entities["crop"]
+
+        return entities
+
+    def process_query(self, query):
+        intent = classify_intent(query)
+        entities = self.extract_entities(query)
+
+        return {
+            "intent": intent,
+            "entities": entities
+        }
+
+
 nlp_engine = AgriculturalNLPEngine()
-
-

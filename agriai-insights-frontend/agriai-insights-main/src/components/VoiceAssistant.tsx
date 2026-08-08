@@ -1,161 +1,414 @@
-import { useState, useRef } from "react";
-import { Mic, Square, Loader2 } from "lucide-react";
-import { DashboardCard, CardHeader } from "./DashboardCard";
-import { cn } from "@/lib/utils";
 
-export function VoiceAssistant() {
-  const [recording, setRecording] = useState(false);
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [statusText, setStatusText] = useState("Ready");
-  const [subStatusText, setSubStatusText] = useState("Click the microphone to begin speaking.");
+import { useRef, useState } from "react";
+import Feedback from "./chat/Feedback";
+import MicButton from "./voice/MicButton";
+import AudioPlayer from "./voice/AudioPlayer";
 
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const audioChunksRef = useRef<Blob[]>([]);
+interface VoiceAssistantProps {
+  onResponse?: (
+    userText: string,
+    aiText: string,
+    audioUrl: string,
+    feedbackId: string
+  ) => void;
+}
 
-  // Grab the local backend address from your .env configuration
-  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+interface VoiceResponse {
+  message_id?: string;
+  session_id?: string;
+  detected_language?: string;
+  canonical_query?: string;
+  inferred_intent?: string;
+  extracted_agricultural_entities?: Record<string, unknown>;
+  canonical_response?: string;
+  translated_response?: string;
+  audio?: string | null;
+  tts_language?: string;
+}
+
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:8000";
+
+const SESSION_ID = "session_web_client";
+
+export function VoiceAssistant({
+  onResponse,
+}: VoiceAssistantProps) {
+  const [recording, setRecording] =
+    useState(false);
+
+  const [isProcessing, setIsProcessing] =
+    useState(false);
+
+  const [statusText, setStatusText] =
+    useState("Ready");
+
+  const [userText, setUserText] =
+    useState("");
+
+  const [aiText, setAiText] =
+    useState("");
+
+  const [audioBase64, setAudioBase64] =
+    useState("");
+
+  const [messageId, setMessageId] =
+    useState("");
+
+  const mediaRecorderRef =
+    useRef<MediaRecorder | null>(null);
+
+  const audioChunksRef =
+    useRef<Blob[]>([]);
+
+  // -----------------------------------------
+  // START RECORDING
+  // -----------------------------------------
 
   const startRecording = async () => {
-    audioChunksRef.current = [];
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const mediaRecorder = new MediaRecorder(stream);
-      mediaRecorderRef.current = mediaRecorder;
+      setStatusText(
+        "Requesting microphone..."
+      );
 
-      mediaRecorder.ondataavailable = (event) => {
+      setUserText("");
+      setAiText("");
+      setAudioBase64("");
+      setMessageId("");
+
+      const stream =
+        await navigator.mediaDevices.getUserMedia(
+          {
+            audio: true,
+          }
+        );
+
+      const mediaRecorder =
+        new MediaRecorder(stream);
+
+      mediaRecorderRef.current =
+        mediaRecorder;
+
+      audioChunksRef.current = [];
+
+      mediaRecorder.ondataavailable = (
+        event
+      ) => {
         if (event.data.size > 0) {
-          audioChunksRef.current.push(event.data);
+          audioChunksRef.current.push(
+            event.data
+          );
         }
       };
 
       mediaRecorder.onstop = async () => {
-        stream.getTracks().forEach((track) => track.stop());
-        const audioBlob = new Blob(audioChunksRef.current, { type: "audio/wav" });
-        await uploadAudio(audioBlob);
+        stream
+          .getTracks()
+          .forEach((track) =>
+            track.stop()
+          );
+
+        const audioBlob = new Blob(
+          audioChunksRef.current,
+          {
+            type:
+              mediaRecorder.mimeType ||
+              "audio/webm",
+          }
+        );
+
+        console.log(
+          "Recorded audio:",
+          audioBlob.type,
+          audioBlob.size
+        );
+
+        await sendAudioToBackend(
+          audioBlob
+        );
       };
 
       mediaRecorder.start();
+
       setRecording(true);
       setStatusText("Listening...");
-      setSubStatusText("Speak clearly into the microphone.");
     } catch (error) {
-      console.error("Microphone Access Error:", error);
-      setStatusText("Error");
-      setSubStatusText("Microphone access was denied or is not supported.");
+      console.error(
+        "Microphone error:",
+        error
+      );
+
+      setRecording(false);
+
+      setStatusText(
+        "Microphone access failed. Please allow microphone permission."
+      );
     }
   };
+
+  // -----------------------------------------
+  // STOP RECORDING
+  // -----------------------------------------
 
   const stopRecording = () => {
-    if (mediaRecorderRef.current && recording) {
-      mediaRecorderRef.current.stop();
+    const mediaRecorder =
+      mediaRecorderRef.current;
+
+    if (!mediaRecorder) {
+      return;
+    }
+
+    if (
+      mediaRecorder.state ===
+      "recording"
+    ) {
       setRecording(false);
+      setStatusText(
+        "Processing your voice..."
+      );
+
+      mediaRecorder.stop();
     }
   };
 
-  const uploadAudio = async (audioBlob: Blob) => {
-    setIsProcessing(true);
-    setStatusText("Processing...");
-    setSubStatusText("Converting speech to text...");
+  // -----------------------------------------
+  // SEND AUDIO TO FASTAPI
+  // -----------------------------------------
 
-    const formData = new FormData();
-    formData.append("session_id", "session_web_client");
-    formData.append("language_code", "en-IN"); 
-    formData.append("file", audioBlob, "farmer_voice.wav");
-
+  const sendAudioToBackend = async (
+    audioBlob: Blob
+  ) => {
     try {
-      // Connect directly to the correct /api/v1 voice endpoint
-      const response = await fetch(`${API_BASE_URL}/api/v1/query/audio`, {
-        method: "POST",
-        body: formData,
-      });
+      setIsProcessing(true);
+      setStatusText(
+        "Sending voice to AgriAI..."
+      );
+
+      const formData = new FormData();
+
+      // IMPORTANT:
+      // Backend expects "file", not "audio"
+      formData.append(
+        "file",
+        audioBlob,
+        "voice_query.webm"
+      );
+
+      // Backend expects session_id
+      formData.append(
+        "session_id",
+        SESSION_ID
+      );
+
+      // Backend expects language_code
+      formData.append(
+        "language_code",
+        "en-IN"
+      );
+
+      console.log(
+        "Sending audio to:",
+        `${API_BASE_URL}/api/v1/query/audio`
+      );
+
+      const response = await fetch(
+        `${API_BASE_URL}/api/v1/query/audio`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      console.log(
+        "Voice API status:",
+        response.status
+      );
 
       if (!response.ok) {
-        throw new Error(`Server returned error status: ${response.status}`);
+        const errorText =
+          await response.text();
+
+        console.error(
+          "Backend error:",
+          errorText
+        );
+
+        throw new Error(
+          `Backend error ${response.status}: ${errorText}`
+        );
       }
 
-      const data = await response.json();
-      
-      setStatusText("Success!");
-      // Displays the translated advisory response returned from the audio processing chain
-      setSubStatusText(data.translated_response || data.canonical_response || "Audio sent successfully!");
+      const data: VoiceResponse =
+        await response.json();
+
+      console.log(
+        "Voice API response:",
+        data
+      );
+
+      // -------------------------------------
+      // TRANSCRIPT
+      // -------------------------------------
+
+      const transcript =
+        data.canonical_query || "";
+
+      // -------------------------------------
+      // AI RESPONSE
+      // -------------------------------------
+
+      const answer =
+        data.translated_response ||
+        data.canonical_response ||
+        "";
+
+      // -------------------------------------
+      // TTS AUDIO
+      // -------------------------------------
+
+      const returnedAudio =
+        data.audio || "";
+
+      // -------------------------------------
+      // MESSAGE ID
+      // -------------------------------------
+
+      const returnedMessageId =
+        data.message_id || "";
+
+      setUserText(transcript);
+
+      setAiText(answer);
+
+      setAudioBase64(
+        returnedAudio
+      );
+
+      setMessageId(
+        returnedMessageId
+      );
+
+      setStatusText(
+        "Response received"
+      );
+
+      console.log(
+        "Transcript:",
+        transcript
+      );
+
+      console.log(
+        "AI response:",
+        answer
+      );
+
+      console.log(
+        "Audio received:",
+        returnedAudio
+          ? `Yes (${returnedAudio.length} characters)`
+          : "No"
+      );
+
+      console.log(
+        "Message ID:",
+        returnedMessageId
+      );
+
+      // Notify parent component
+      onResponse?.(
+        transcript,
+        answer,
+        returnedAudio,
+        returnedMessageId
+      );
     } catch (error) {
-      console.error("Audio Upload Connection Error:", error);
-      setStatusText("Connection Failed");
-      setSubStatusText("Could not send voice data to the local FastAPI backend.");
+      console.error(
+        "Voice request failed:",
+        error
+      );
+
+      setStatusText(
+        "Connection failed. Could not send voice data to the FastAPI backend."
+      );
     } finally {
       setIsProcessing(false);
     }
   };
 
-  const handleMicClick = () => {
-    if (isProcessing) return;
-    if (recording) {
-      stopRecording();
-    } else {
-      startRecording();
-    }
-  };
+  // -----------------------------------------
+  // UI
+  // -----------------------------------------
 
   return (
-    <DashboardCard>
-      <CardHeader
-        icon={<Mic className="h-5 w-5 text-sky" />}
-        title="Voice Assistant"
-        subtitle="Speak in your language, we'll do the rest."
-      />
+    <div className="w-full space-y-6">
 
-      <div className="flex flex-col items-center gap-4 py-4">
-        <button
-          onClick={handleMicClick}
-          disabled={isProcessing}
-          className={cn(
-            "relative grid h-24 w-24 place-items-center rounded-full text-primary-foreground transition-all disabled:opacity-50 disabled:cursor-not-allowed",
-            recording
-              ? "bg-destructive shadow-[0_0_0_10px_oklch(0.58_0.22_25/0.15)]"
-              : "bg-gradient-hero shadow-glow hover:scale-105",
-          )}
-        >
-          {isProcessing ? (
-            <Loader2 className="h-8 w-8 animate-spin" />
-          ) : recording ? (
-            <Square className="h-8 w-8" />
-          ) : (
-            <Mic className="h-8 w-8" />
-          )}
-          {recording && (
-            <span className="absolute inset-0 animate-ping rounded-full bg-destructive/30" />
-          )}
-        </button>
+      {/* MIC BUTTON */}
 
-        <div className="flex h-10 items-end gap-1">
-          {Array.from({ length: 24 }).map((_, i) => (
-            <span
-              key={i}
-              className={cn(
-                "w-1.5 rounded-full bg-leaf",
-                recording ? "animate-wave" : "h-1 opacity-30",
-              )}
-              style={
-                recording
-                  ? {
-                      height: `${20 + (i % 5) * 8}px`,
-                      animationDelay: `${(i % 8) * 0.08}s`,
-                    }
-                  : undefined
-              }
-            />
-          ))}
-        </div>
+      <div className="flex flex-col items-center justify-center gap-4">
 
-        <div className="text-center px-4">
-          <div className="text-sm font-semibold">
-            {statusText}
-          </div>
-          <div className="mt-1 text-xs text-muted-foreground line-clamp-3 max-w-[250px]">
-            {subStatusText}
-          </div>
-        </div>
+        <MicButton
+          isRecording={recording}
+          isProcessing={isProcessing}
+          onStart={startRecording}
+          onStop={stopRecording}
+        />
+
+        <p className="text-sm text-muted-foreground">
+          {statusText}
+        </p>
+
       </div>
-    </DashboardCard>
+
+      {/* USER QUERY */}
+
+      {userText && (
+        <div className="rounded-lg border p-4">
+
+          <p className="mb-1 text-sm font-medium">
+            You
+          </p>
+
+          <p className="text-sm text-muted-foreground">
+            {userText}
+          </p>
+
+        </div>
+      )}
+
+      {/* AI RESPONSE */}
+
+      {aiText && (
+        <div className="rounded-lg border p-4">
+
+          <p className="mb-1 text-sm font-medium">
+            AgriAI
+          </p>
+
+          <p className="whitespace-pre-line text-sm">
+            {aiText}
+          </p>
+
+        </div>
+      )}
+
+      {/* AI VOICE RESPONSE */}
+
+      {audioBase64 && (
+        <AudioPlayer
+          audioBase64={audioBase64}
+        />
+      )}
+
+      {/* FEEDBACK */}
+
+      {messageId && aiText && (
+        <Feedback
+          messageId={messageId}
+        />
+      )}
+
+    </div>
   );
 }
+
