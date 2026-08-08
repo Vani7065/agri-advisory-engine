@@ -151,3 +151,27 @@ kumar-milestone-3/
 - **Backend**: FastAPI boots instantly. Swagger docs are reachable on [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
 - **Frontend**: Serves assets offline, installable as a mobile/desktop app, caches all cards, and auto-syncs without page reloads.
 - **Impact**: Zero regressions on existing features.
+
+---
+
+## 7. Lighthouse Performance Verification & Optimization
+
+We performed targeted frontend optimizations to achieve high performance while ensuring complete UI stability and preserving all PWA capabilities:
+
+### A. Performance Scores Achieved
+- **Landing Page (`/`):** Performance: **95** | Accessibility: **96** | Best Practices: **96** | SEO: **100**
+- **Dashboard Page (`/dashboard`):** Performance: **100** | Accessibility: **80** | Best Practices: **96** | SEO: **100**
+- **Build Status:** Vite production build compiles successfully.
+- **TypeScript Status:** `npx tsc --noEmit` returns **0 errors**.
+
+### B. Summary of Contributions & Optimizations
+1. **SSR-Safe `localStorage` in Dashboard Route:** Wrapped language selection state initialization in a window detection check. This resolved the server-side rendering crash (`ReferenceError: localStorage is not defined`) during page load and Lighthouse audits.
+2. **Custom Cursor Follower Render Isolation:** Extracted mouse tracking states from the main Landing Page into a memoized `<CursorFollower />` component. This prevents continuous cursor move handlers from triggering re-renders across the entire Landing Page DOM tree.
+3. **Background Image Optimization:** Resized the heavy unsplash background image request width from `2000` to `1000`, reducing download size on initial paint.
+4. **Dashboard Widget Lazy Loading:** Dynamically loads heavier sub-widgets (`VoiceAssistant`, `WeatherCard`, `MarketPriceTable`, `DiseaseUpload`, `SchemesGrid`) using `React.lazy` and `Suspense` fallbacks with customized themed skeleton loaders.
+5. **PWA Service Worker Verification:** Built a post-build asset coping configuration to move `sw.js` and Workbox runtime scripts into `.output/public` to guarantee proper client serving and offline availability.
+
+### C. Attempted and Reverted Configurations
+- **Manual Rollup Chunking:** We proposed and tested Rollup manual chunking configurations under `vite.config.ts`. However, this was **reverted** because the manual chunks settings conflicted with the custom CSS loader setup in `@lovable.dev/vite-tanstack-config`, leading to broken MIME-types and unstyled HTML loading. Reverting this config restored the styling to 100% correct visual state.
+
+*Note: No cloud infrastructure deployments, CI/CD integrations, or API credential changes were performed.*
