@@ -2,32 +2,40 @@
 import { Volume2 } from "lucide-react";
 
 interface AudioPlayerProps {
-  audioUrl: string;
+  audioBase64: string;
   isPlaying?: boolean;
   onPlay?: () => void;
   onEnded?: () => void;
 }
 
 export default function AudioPlayer({
-  audioUrl,
+  audioBase64,
   isPlaying = false,
   onPlay,
   onEnded,
 }: AudioPlayerProps) {
-  if (!audioUrl) {
+
+  if (!audioBase64) {
     return null;
   }
 
-  return (
-    <div className="mt-4 rounded-xl border border-border bg-muted/30 p-3">
-      <div className="mb-2 flex items-center gap-2 text-xs text-muted-foreground">
-        <Volume2 className="h-4 w-4" />
+  // Backend returns WAV audio as base64.
+  const audioUrl =
+    `data:audio/wav;base64,${audioBase64}`;
 
-        <span>
+  return (
+    <div className="mt-4 rounded-lg border p-4">
+
+      <div className="mb-3 flex items-center gap-2">
+
+        <Volume2 className="h-5 w-5" />
+
+        <span className="text-sm font-medium">
           {isPlaying
             ? "AI Voice Playing..."
             : "AI Voice Response"}
         </span>
+
       </div>
 
       <audio
@@ -37,6 +45,7 @@ export default function AudioPlayer({
         onPlay={onPlay}
         onEnded={onEnded}
       />
+
     </div>
   );
 }

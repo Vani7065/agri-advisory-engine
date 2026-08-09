@@ -23,7 +23,6 @@ export default function Feedback({
   const submitFeedback = async (
     feedback: "positive" | "negative"
   ) => {
-    // 1. Message ID is required
     if (!messageId) {
       console.warn(
         "⚠️ Cannot submit feedback: message ID is missing."
@@ -31,30 +30,32 @@ export default function Feedback({
       return;
     }
 
-    // 2. Prevent duplicate request while submitting
     if (isSubmitting) {
-      console.log(
-        "⏳ Feedback request already in progress."
-      );
       return;
     }
 
-    // 3. Prevent submitting the same feedback again
     if (selected === feedback) {
-      console.log(
-        "ℹ️ This feedback has already been submitted."
-      );
       return;
     }
 
     try {
       setIsSubmitting(true);
 
-      console.log("=================================");
+      console.log(
+        "================================="
+      );
       console.log("📤 SENDING FEEDBACK");
-      console.log("Message ID:", messageId);
-      console.log("Feedback:", feedback);
-      console.log("=================================");
+      console.log(
+        "Message ID:",
+        messageId
+      );
+      console.log(
+        "Feedback:",
+        feedback
+      );
+      console.log(
+        "================================="
+      );
 
       const response = await fetch(
         `${API_BASE_URL}/api/v1/feedback`,
@@ -65,7 +66,7 @@ export default function Feedback({
           },
           body: JSON.stringify({
             message_id: messageId,
-            feedback,
+            feedback: feedback,
           }),
         }
       );
@@ -89,7 +90,6 @@ export default function Feedback({
         );
       }
 
-      // 4. Mark selected feedback
       setSelected(feedback);
 
       console.log(
@@ -105,19 +105,20 @@ export default function Feedback({
     }
   };
 
-  // Don't render feedback without message ID
   if (!messageId) {
     return null;
   }
 
   return (
-    <div className="flex items-center gap-1 mt-2">
+    <div className="flex items-center gap-2 mt-2">
       {/* POSITIVE FEEDBACK */}
+
       <button
         type="button"
         disabled={isSubmitting}
         onClick={(event) => {
           event.stopPropagation();
+
           submitFeedback("positive");
         }}
         className={`p-2 rounded-md transition ${
@@ -135,11 +136,13 @@ export default function Feedback({
       </button>
 
       {/* NEGATIVE FEEDBACK */}
+
       <button
         type="button"
         disabled={isSubmitting}
         onClick={(event) => {
           event.stopPropagation();
+
           submitFeedback("negative");
         }}
         className={`p-2 rounded-md transition ${
