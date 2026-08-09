@@ -1,19 +1,40 @@
-from pydantic import BaseModel, Field
 from typing import Optional, Dict, Any
 
+from pydantic import BaseModel, Field
+
+
+# ============================================================
+# TEXT QUERY REQUEST
+# ============================================================
+
 class TextQueryRequest(BaseModel):
-    session_id: str = Field(..., description="Unique identifier for the session context tracking")
-    text: str = Field(..., description="The raw incoming text question from the farmer")
-    preferred_language: Optional[str] = Field(
-        "auto", 
-        description="Supported codes: hi-IN (Hindi), kn-IN (Kannada), te-IN (Telugu), ta-IN (Tamil), ml-IN (Malayalam)"
-    )
+    session_id: str
+    text: str
+    preferred_language: Optional[str] = "auto"
+
+
+# ============================================================
+# API RESPONSE
+# ============================================================
 
 class APIResponseSchema(BaseModel):
-    session_id: str
-    detected_language: str
-    canonical_query: str
-    inferred_intent: str
-    extracted_agricultural_entities: Dict[str, Any]
-    canonical_response: str
-    translated_response: str
+
+    session_id: Optional[str] = None
+
+    message_id: Optional[str] = None
+
+    detected_language: Optional[str] = None
+
+    canonical_query: Optional[str] = None
+
+    inferred_intent: Optional[str] = None
+
+    extracted_agricultural_entities: Dict[str, Any] = {}
+
+    canonical_response: Optional[str] = None
+
+    translated_response: Optional[str] = None
+
+    audio: Optional[str] = None
+
+    tts_language: Optional[str] = None
